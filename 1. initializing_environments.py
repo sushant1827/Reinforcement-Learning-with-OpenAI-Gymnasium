@@ -10,7 +10,7 @@ observation, info = env.reset(seed=42)
 # info: extra debugging information (usually not needed for basic learning)
 
 print(f"Initial observation: {observation}")
-# Example output: 
+# Example output:
 # Initial observation: {'cart_position': 0.0, 'cart_velocity': 0.0, 'pole_angle': 0.0, 'pole_velocity': 0.0}
 
 episode_over = False
@@ -30,7 +30,9 @@ while not episode_over:
     total_reward += reward
     episode_over = terminated or truncated
 
-    print(f"Action: {action}, Observation: {observation}, Reward: {reward}, Total Reward: {total_reward}")
+    print(
+        f"Action: {action}, Observation: {observation}, Reward: {reward}, Total Reward: {total_reward}"
+    )
 
 # Close the environment when done
 env.close()
